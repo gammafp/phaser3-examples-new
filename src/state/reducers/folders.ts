@@ -8,6 +8,9 @@ const folders = createSlice({
     reducers: {
         setFolders: (state, action: PayloadAction<any>) => {
             return action.payload;
+        },
+        getFolder: (state, action: PayloadAction<any>) => {
+            // TODO: Implement this
         }
     }
 });
