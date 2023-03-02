@@ -1,3 +1,6 @@
 export const MainPage = () => {
-    return <>Hello</>;
-};
+
+    return (
+        <>Hello</>
+    );
+}
