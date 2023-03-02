@@ -1,15 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { MainPage } from './pages/MainPage';
+import { useDispatch } from "react-redux";
 import './App.scss'
 
-function App() {
-	const [count, setCount] = useState(0)
+// Import json
+import foldersJSON from "./folders/examples.json";
+import { useEffect } from 'react';
+import { setFolders } from './state/reducers/folders';
+
+
+
+const App = () => {
+
+    const dispatch = useDispatch();
+
+    // Load folder data
+    useEffect(() => {
+        dispatch(setFolders(foldersJSON));
+    });
 
 	return (
 		<div className="App">
-			Hi
+			<MainPage />
 		</div>
-	)
+	);
 }
 
 export default App
