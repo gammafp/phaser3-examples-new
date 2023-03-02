@@ -1,16 +1,13 @@
-import { MainPage } from './pages/MainPage';
+import { MainPage } from "./pages/MainPage";
 import { useDispatch } from "react-redux";
-import './App.scss'
+import "./App.scss";
 
 // Import json
 import foldersJSON from "./folders/examples.json";
-import { useEffect } from 'react';
-import { setFolders } from './state/reducers/folders';
-
-
+import { useEffect } from "react";
+import { setFolders } from "./state/reducers/folders";
 
 const App = () => {
-
     const dispatch = useDispatch();
 
     // Load folder data
@@ -18,11 +15,11 @@ const App = () => {
         dispatch(setFolders(foldersJSON));
     });
 
-	return (
-		<div className="App">
-			<MainPage />
-		</div>
-	);
-}
+    return (
+        <div className="App">
+            <MainPage />
+        </div>
+    );
+};
 
-export default App
+export default App;
