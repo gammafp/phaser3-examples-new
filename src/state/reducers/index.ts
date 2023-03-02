@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
 
-export const rootReducer = combineReducers({
+import folders from "./folders";
 
+export const rootReducer = combineReducers({
+    folders
 });
