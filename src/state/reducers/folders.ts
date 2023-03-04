@@ -1,16 +1,13 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-const initialState: any = [];
-
+const initialState: any = {};
 const folders = createSlice({
     name: 'folders',
     initialState,
     reducers: {
         setFolders: (state, action: PayloadAction<any>) => {
-            return action.payload;
-        },
-        getFolder: (state, action: PayloadAction<any>) => {
-            // TODO: Implement this
+            const folders = JSON.parse(JSON.stringify(action.payload).replace(/\\\\/g, "/"));
+            return folders;
         }
     }
 });
