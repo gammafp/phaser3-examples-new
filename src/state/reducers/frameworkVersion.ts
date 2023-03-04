@@ -1,8 +1,8 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 const initialState: string = "0.0.0";
-const phaserVersion = createSlice({
-    name: 'phaser-version',
+const frameworkVersion = createSlice({
+    name: 'framework-version',
     initialState,
     reducers: {
         setVersion: (state, action: PayloadAction<string>) => {
@@ -11,5 +11,5 @@ const phaserVersion = createSlice({
     }
 });
 
-export const { setVersion } = phaserVersion.actions;
-export default phaserVersion.reducer;
+export const { setVersion } = frameworkVersion.actions;
+export default frameworkVersion.reducer;

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
 import folders from "./folders";
-import phaserVersion from "./phaserVersion";
+import frameworkVersion from "./frameworkVersion";
 
 export const rootReducer = combineReducers({
     folders,
-    phaserVersion
+    frameworkVersion
 });
