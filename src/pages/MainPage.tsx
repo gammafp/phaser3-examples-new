@@ -9,10 +9,6 @@ export const MainPage = () => {
     const folderStore = useSelector<AppState>(store => store.folders) as TFolders;
     const folders = getFolders(folderStore, "");
 
-    useEffect(() => {
-        console.log(folders)
-    });
-
     return (
         <>
             {
@@ -22,7 +18,6 @@ export const MainPage = () => {
                         <div key={index}>
                             <a href={`${folder.path}`}>
                                 {folder.name} - {folder.path}
-
                             </a>
                         </div>
                     )

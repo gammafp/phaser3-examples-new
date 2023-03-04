@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import { setFolders } from './state/reducers/folders';
 
 
+// Routes webroute.com/version/(folder/file.js)
 
 const App = () => {
 
