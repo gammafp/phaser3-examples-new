@@ -14,7 +14,6 @@ export const getFolders = (stateFolder: TFolders, route: string) => {
         const routeArray = route.replace(/(.\/src|\/src|src|\.\/)\/?/, "")
             .split("/")
             .filter((routeFilter) => !isEmpty(routeFilter));
-        console.log("routeArray", routeArray)
 
         let actualFolder: TFolders | undefined = folders;
         if (isEmpty(routeArray[0]) || (routeArray[0] === "." && routeArray.length === 1) || (routeArray[0] === "./" && routeArray.length === 1)) {

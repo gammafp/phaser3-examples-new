@@ -8,6 +8,8 @@ import foldersJSON from "./folders/examples.json";
 import { useEffect } from 'react';
 import { setFolders } from './state/reducers/folders';
 
+import { RouterProvider } from "react-router-dom";
+import { router } from './router/Router';
 
 // Routes webroute.com/version/(folder/file.js)
 
@@ -20,9 +22,11 @@ const App = () => {
         dispatch(setFolders(foldersJSON));
     });
 
+
+
 	return (
 		<div className="App">
-			<MainPage />
+            <RouterProvider router={router} />
 		</div>
 	);
 }
